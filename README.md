@@ -425,36 +425,6 @@ PID-Temperature-Control-System/
     └── PID_Performance_Comparison.xlsx
 ```
 
----
-
-##  Project Files
-
-### `temperature_control.slx`
-
-Main MATLAB/Simulink model containing the closed-loop temperature control system.
-
-### `compare_controller.m`
-
-MATLAB script used to analyze and compare the P, PI, and PID controller responses.
-
-### `create_simulink_model.m`
-
-MATLAB script used to create/configure the Simulink model.
-
-### `controller_metrics.csv`
-
-Contains the numerical performance metrics obtained from the controller simulations.
-
-### `PID_Performance_Comparison.xlsx`
-
-Excel version of the controller performance comparison table.
-
-### `results/`
-
-Contains the generated controller response graphs, comparison graph, disturbance-response graph, and performance data.
-
----
-
 ##  How to Run
 
 ### Requirements
@@ -506,21 +476,6 @@ The simulation demonstrates the effect of proportional, integral, and derivative
 
 The results are specific to the thermal plant model and controller gains used in this project.
 
----
-
-##  Future Improvements
-
-Possible extensions of this project include:
-
-- PID tuning using MATLAB PID Tuner
-- Automatic controller gain optimization
-- Anti-windup implementation
-- Derivative filtering
-- Sensor noise modeling
-- Nonlinear thermal plant modeling
-- Real-time temperature sensing
-- Arduino/ESP32 implementation
-- Hardware-in-the-loop testing
 
 ---
 
@@ -541,7 +496,7 @@ The concepts demonstrated in this project are relevant to:
 
 ##  Author
 
-**Gaurang Tak**
+**Gourang Tak**
 
 B.Tech Electronics and Communication Engineering  
 National Institute of Technology Srinagar
