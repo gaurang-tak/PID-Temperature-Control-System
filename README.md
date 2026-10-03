@@ -1,51 +1,38 @@
-# PID Temperature Control System
+# PID Temperature Control System – MATLAB & Simulink
 
-A MATLAB/Simulink-based temperature control system designed to analyze and compare the performance of P, PI, and PID controllers for a first-order thermal plant.
+## Project Overview
 
-## 📌 Project Overview
+This project presents the modeling and closed-loop temperature control of a first-order thermal system using **P, PI, and PID controllers** in MATLAB and Simulink.
 
-Temperature control is an important application of feedback control systems. This project models a first-order thermal system and investigates how different controllers affect the system's transient and steady-state performance.
+The objective is to regulate the normalized temperature at a reference value of **1** and compare the performance of different controllers based on:
 
-The project implements and compares:
+- Rise time
+- Settling time
+- Peak time
+- Overshoot
+- Steady-state error
 
-- Proportional (P) Controller
-- Proportional-Integral (PI) Controller
-- Proportional-Integral-Derivative (PID) Controller
+The project also analyzes the ability of the PID controller to maintain the desired temperature when an external disturbance is applied at **t = 30 seconds**.
 
-The controllers are evaluated using rise time, settling time, peak time, overshoot, and steady-state error.
+### Controller Comparison
 
-The system is also tested under an external disturbance to analyze the disturbance-rejection capability of the PID controller.
+![P, PI and PID Controller Comparison](results/Combined_P_vs_PI_vs_PID_graph.png)
 
----
-
-## 🎯 Objectives
-
-- Model a first-order thermal system using MATLAB/Simulink.
-- Implement P, PI, and PID controllers.
-- Compare the transient response of different controllers.
-- Calculate important performance parameters.
-- Analyze steady-state error.
-- Test the PID controller under an external disturbance.
-- Visualize the system response using MATLAB plots.
+The comparison plot shows the response of the P, PI, and PID controllers toward the desired temperature setpoint.
 
 ---
 
-## ⚙️ System Model
+## Software Used
 
-The thermal plant is modeled as a first-order transfer function:
+- MATLAB
+- Simulink
+- Control System Toolbox
 
-$$
-G(s) = \frac{1}{10s+1}
-$$
+---
 
-The system uses a closed-loop feedback configuration.
+## Thermal Plant Model
 
-### Control Structure
+The thermal system is modeled as a first-order plant with the following transfer function:
 
-```text
-                    ┌─────────────────────┐
-                    │   P / PI / PID      │
-Setpoint ──► (+) ──►│     Controller      │──► Thermal Plant ──► Output
-            ▲  -    └─────────────────────┘      G(s)=1/(10s+1)
-            │                                             │
-            └────────────────── Feedback ─────────────────┘
+```math
+G(s)=\frac{1}{10s+1}
